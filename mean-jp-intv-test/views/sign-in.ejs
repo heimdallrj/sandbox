@@ -1,0 +1,38 @@
+<%- include header -%>
+
+<div class="main">
+  <div id="sign-in">
+    <h2>Sign In</h2>
+
+      <div class="form-container">
+        <% if (message.length > 0) { %>
+          <div class="alert alert-danger"><%- message %></div>
+        <% } %>
+
+        <form action="/sign-in" method="post">
+
+          <fieldset>
+            <legend>E-mail</legend>
+            <input type="email" id="email" name="email" placeholder="user@example.com" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Password</legend>
+            <input type="password" id="password" name="password" required />
+          </fieldset>
+
+          <div class="two-step-enabled">
+            <input type="checkbox" id="2step-verification" name="2step-verification" onClick="return false;" checked />
+            <span>2FA Enabled</span>
+          </div>
+
+          <div>
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+      </div>
+      
+  </div>
+</div>
+
+<%- include footer -%>

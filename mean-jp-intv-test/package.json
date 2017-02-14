@@ -1,0 +1,46 @@
+{
+  "name": "jp-auth-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "gulp": "gulp",
+    "start": ". .env && node ./server.js",
+    "watch": ". .env && nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkholic/JPAuthTest.git"
+  },
+  "author": "thinkholic <mailtokasun@gmail.com> (http://www.thinkholic.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkholic/JPAuthTest/issues"
+  },
+  "homepage": "https://github.com/thinkholic/JPAuthTest#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0"
+  },
+  "dependencies": {
+    "authy": "^1.2.0",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.0.0",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.0.0",
+    "ejs": "~0.8.5",
+    "express": "~4.0.0",
+    "express-session": "~1.0.0",
+    "express-validator": "^3.0.0",
+    "gravatar": "^1.6.0",
+    "method-override": "~1.0.0",
+    "mongoose": "^4.4.20",
+    "morgan": "~1.0.0",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2"
+  }
+}

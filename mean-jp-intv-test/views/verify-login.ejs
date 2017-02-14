@@ -1,0 +1,28 @@
+<%- include header -%>
+
+<div class="main">
+  <div id="sign-in">
+    <h2>Sign In - 2-Step Verification</h2>      
+
+      <div class="form-container">
+        <form action="/sign-in/verify" method="post">
+          <fieldset>
+            <h3>Enter your verification code</h3>
+
+            <p>
+              To verify your identitiy, please enter the verification code have sent to your mobile number. <br/>
+              <%= phone_field %>
+            </p>
+            <input type="text" id="verificationCode" name="verificationCode" required />
+            <button id="verify" type="submit">Verify</button>
+          </fieldset>
+
+          <input type="hidden" id="email" required name="email" value="<%= email_field %>" />
+          <input type="hidden" id="password" required name="password" value="<%= password_field %>" />
+        </form>
+      </div>
+      
+  </div>
+</div>
+
+<%- include footer -%>

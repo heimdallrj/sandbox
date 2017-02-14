@@ -1,0 +1,60 @@
+
+<%- include header -%>
+
+<div class="main">
+  <div id="sign-up">
+    <h2>Create Your Account</h2>
+
+    <div class="form-container">
+
+      <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%- message %></div>
+      <% } %>  
+
+      <form action="/" method="post">
+          <fieldset>
+            <legend>Name</legend>
+            <input type="text" id="first_name" name="first_name" placeholder="First" required />
+            <input type="text" id="last_name" name="last_name" placeholder="Last" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Your current email address</legend>
+            <input type="email" id="email" name="email" placeholder="user@example.com" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Create a password</legend>
+            <input type="password" id="password" name="password" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Confirm your password</legend>
+            <input type="password" id="password_confirm" name="password_confirm" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Country Code</legend>
+            <select id="authy-countries" name="authy-countries"></select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Mobile Phone</legend>
+            <input id="authy-cellphone" type="text" value="" placeholder="" name="authy-cellphone" />
+          </fieldset>
+
+          <div class="two-step-enabled">
+            <input type="checkbox" id="2step-verification" name="2step-verification" onClick="return false;" checked />
+            <span>2FA Enabled</span>
+          </div>
+
+          <div>
+            <button type="submit">Create</button>
+            <span class="signin-tag">Already have an account? <a href="/sign-in">Sign In</a></span>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include footer -%>
