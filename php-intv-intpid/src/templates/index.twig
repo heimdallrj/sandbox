@@ -1,0 +1,55 @@
+{% include 'header.twig' %}
+
+<div class="container">
+    <div class="starter-template">
+        <h1>My Book Catalogue</h1>
+
+        <form>
+          <fieldset class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="list" id="list-all" value="all" checked>
+                See all books in the Catelogue
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="list" id="list-fitered" value="filtered">
+                See only
+                <select disabled id="lang-filter" name="filter">
+                  {% for lang in languages %}
+                  <option value="language-{{ lang }}">{{ lang }}</option>
+                  {% endfor %}
+                </select> language books
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="list" id="list-sorted" value="sorted">
+                See all books in ordered by
+                <select disabled id="sort-filter" name="by">
+                  {% for title in titles %}
+                  <option value="{{ title }}">{{ title }}</option>
+                  {% endfor %}
+                </select>
+              </label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Browse</button>
+        </form>
+
+        <script type="text/javascript">
+          $( "#list-fitered" ).click(function() {
+            $( "#lang-filter" ).removeAttr("disabled");
+          });
+
+          $( "#list-sorted" ).click(function() {
+            $( "#sort-filter" ).removeAttr("disabled");
+          });
+        </script>
+    </div>
+</div>
+
+{% include 'footer.twig' %}

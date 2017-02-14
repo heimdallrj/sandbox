@@ -1,0 +1,49 @@
+body {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.filter hr {
+  margin-top: 0;
+}
+
+.meta {
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand {
+  text-transform: uppercase;
+}
+
+.table tr th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table tr td.text-center {
+  text-align: center;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #e6dada;
+}
+
+.table-hover>tbody>tr:hover {
+  background-color: ##ccc;
+  font-weight: bold;
+}
+
+pre {
+  padding: 0;
+}
+
+/* mobile only css */
+@media only screen and (max-width: 480px) {
+  table tr th.author, table tr td.author {
+    display: none;
+  }
+}
